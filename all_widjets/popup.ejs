@@ -1,11 +1,11 @@
 <% include ../components/_head %>
 
 <div class="popup">
-	<div class="popup-window row center-xs">
-		<div class="col-md-6 window">
+	<div class="popup-window">
+		<div class="col-md-offset-3 col-md-6 window animated bounceInDown">
 			<div class="popup-head">
 				<h2>Hello this my first popup.</h2>
-				<a href="#"><i class="material-icons">close</i></a>
+				<!-- <a href="#"><i class="material-icons">close</i></a> -->
 			</div>
 			<div class="popup-body">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -17,11 +17,13 @@
 			</div>
 			<div class="popup-footer">
 				<ul>
-					<li><a href="#">No</a></li>
-					<li><a href="#">Yes</a></li>
+					<li><a href="javascript:PopUpHide()">Cancel</a></li>
+					<li><a href="javascript:PopUpHide()">Ok</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<a href="#" id="popup">Click me</a>
+	<div class="row center-xs">
+		<a href="javascript:PopUpShow()" id="popup">Click me</a>
+	</div>
 </div>

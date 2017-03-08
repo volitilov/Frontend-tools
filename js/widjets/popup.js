@@ -1,11 +1,9 @@
 var $j = jQuery.noConflict();
 
-$j(function() {
-    $j('#popup').click(function(event) {
-        event.preventDefault();
+function PopUpShow(){
+    $j(".popup-window").show();
+}
 
-        alert('hello world');
-
-       return false;
-    });
-});
+function PopUpHide(){
+    $j(".popup-window").hide();
+}

@@ -14,3 +14,4 @@ addScript('/js/my_scripts/tittle.js');
 
 // vidjets_scripts :::::::::::::::::::::::::::::::::
 addScript('/js/widjets/popup.js');
+addScript('/js/widjets/sidebar.js');
