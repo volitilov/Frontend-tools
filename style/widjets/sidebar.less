@@ -1,64 +1,57 @@
-.widjet-sidebar {
+.sidebar {
 	margin-top: 50px;
-	border-radius: 6px;
-	border: 2px dotted #ddd;
-	.widjet-sidebar-head {
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 5px;
+	border: 1px dotted #ddd;
+	.sidebar-head {
+		background-color: #eee;
 		padding: 10px;
 		border-bottom: 1px dotted #ddd;
 		a {
-			padding: 8px;
-			display: block;
-			width: 24px;
-			text-decoration: none;
-			border-radius: 4px;
-			border: 1px dotted #ddd;
-			&:hover {
-				background-color: #eee;
-			}
+			.btn-background;
+			width: 55px;
 			i {
 				font-size: 25px;
 			}
 		}
 	}
-	.widjet-sidebar-body {
-		.sidebar-menu {
+	.sidebar-menu {
+		padding: 0px;
+		border-right: 1px dotted #ddd;
+		ul {
+			margin: 0px;
 			padding: 0px;
-			border-right: 1px dotted #ddd;
-			ul {
-				padding: 0px;
-				li {
-					a {
-						transition: 0.3s;
-						display: block;
-						padding: 13px;
-						padding-left: 25px;
-						text-decoration: none;
-						border-bottom: 1px dotted #ddd;
-						i {
-							margin-right: 10px;
-						}
-						span {
-							display: none;
-							position: absolute;
-							padding-top: 5px;
-						}
-						&:hover {
-							background-color: #eee;
-						}
-						&:after {
-							content: '∵';
-							float: right;
-						}
+			li {
+				a {
+					transition: 0.3s;
+					display: block;
+					overflow: hidden;
+					padding: 15px;
+					padding-left: 25px;
+					text-decoration: none;
+					border-bottom: 1px dotted #ddd;
+					i {
+						position: absolute;
 					}
-				}
-				.x {
-					border: none;
+					p {
+						margin-right: 15px;
+						margin-left: 35px;
+						display: inline-block;
+					}
+					&:hover {
+						background-color: rgba(0, 0, 0, .05);
+					}
+					.x {
+						right: 10px;
+						margin-top: 5px;
+						font-size: 18px;
+					}
 				}
 			}
 		}
-		.sidebar-body {
-			width: 72%;
-			padding: 30px;
-		}
+	}
+	.sidebar-body {
+		padding: 30px;
 	}
 }

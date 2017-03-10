@@ -1,8 +1,21 @@
 .popup {
 	padding: 50px;
+	a {
+		.btn-background;
+	}
+	#popup {
+		position: absolute;
+		display: block;
+		text-align: center;
+		left: 50%;
+		margin-left: -50px;
+		width: 100px;
+		height: auto;
+	}
 	.popup-window {
 		transition: 0.5s;
 		position: fixed;
+		z-index: 9999;
 		top: 0px;
 		left: 0px;
 		right: 0px;
@@ -16,6 +29,8 @@
 		// -ms-filter: blur(5px);
 		// filter: blur(5px);
 		.window {
+			position: absolute;
+			left: 25%;
 			text-align: left;
 			padding: 40px;
 			background-color: #fff;
@@ -47,32 +62,8 @@
 				li {
 					display: inline-block;
 					margin-left: 5px;
-					a {
-						padding: 10px;
-						padding-left: 15px;
-						padding-right: 15px;
-						border-radius: 4px;
-						border: 1px dotted #ddd;
-						text-decoration: none;
-						background-color: #eee;
-						&:hover {
-							background-color: #ddd;
-						}
-					}
 				}
 			}
-		}
-	}
-	#popup {
-		padding: 10px;
-		padding-left: 15px;
-		padding-right: 15px;
-		border-radius: 4px;
-		border: 1px dotted #ddd;
-		text-decoration: none;
-		background-color: #eee;
-		&:hover {
-			background-color: #ddd;
 		}
 	}
 }
