@@ -141,6 +141,9 @@ a:focus {
 a:focus {
   outline: none;
 }
+input:focus {
+  outline: none;
+}
 figure {
   margin: 0;
 }
