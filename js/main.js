@@ -10,11 +10,13 @@ addScript('/js/rules/jquery.slim.min.js');
 // addScript('/js/rules/jquery-ui.min.js');
 
 // my_scripts ::::::::::::::::::::::::::::::::::::::
-// addScript('/js/my_scripts/tittle.js');
+addScript('/js/my_scripts/tittle.js');
 // addScript('/js/my_scripts/head.js');
 
 // vidjets_scripts :::::::::::::::::::::::::::::::::
-// addScript('/js/widjets/popup.js');
-// addScript('/js/widjets/sidebar.js');
-// addScript('/js/widjets/contextMenu.js');
+addScript('/js/widjets/popup.js');
+addScript('/js/widjets/sidebar.js');
+addScript('/js/widjets/contextMenu.js');
 addScript('/js/widjets/toolbar.js');
+addScript('/js/widjets/menu.js');
+addScript('/js/widjets/slider.js');
