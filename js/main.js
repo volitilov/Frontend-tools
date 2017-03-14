@@ -5,10 +5,6 @@ function addScript(src){
 	document.head.appendChild(script);
 }
 
-// main_scripts ::::::::::::::::::::::::::::::::::::
-addScript('/js/rules/jquery.slim.min.js');
-// addScript('/js/rules/jquery-ui.min.js');
-
 // my_scripts ::::::::::::::::::::::::::::::::::::::
 addScript('/js/my_scripts/tittle.js');
 // addScript('/js/my_scripts/head.js');

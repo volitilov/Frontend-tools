@@ -1,25 +1,49 @@
 <div class="widjet-slider">
-	<div class="slider">
-		<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
-			<span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
-			Master volume
-		</p>
+	<div class="col-md-6 ">
+		<div class="slider"></div>
 
-		<div id="master" style="width:260px; margin:15px;"></div>
-
-		<p class="ui-state-default ui-corner-all" style="padding:4px;margin-top:4em;">
-			<span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
-			Graphic EQ
-		</p>
-
-		<div id="eq">
-			<span>88</span>
-			<span>77</span>
-			<span>55</span>
-			<span>33</span>
-			<span>40</span>
-			<span>45</span>
-			<span>70</span>
+		<div class="slider2">
+			<div class="ui-slider-handle"></div>
 		</div>
+
+		<div class="slider3">
+			<ul>
+				<li value="88"></li>
+				<li value="77"></li>
+				<li value="55"></li>
+				<li value="33"></li>
+				<li value="40"></li>
+				<li value="45"></li>
+				<li value="70"></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="slider4">
+			<p>
+				<label for="amount">Price range:</label>
+				<input type="text" id="amount" readonly>
+			</p>
+	 
+			<div id="slider-range"></div>
+		</div>
+
+		<div class="slider5">
+			<form id="reservation">
+				<label for="minbeds">Minimum number of beds</label>
+				<select name="minbeds" id="minbeds">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+				</select>
+				<div class="ex-slider"></div>
+			</form>
+		</div>
+
+		
 	</div>
 </div>
