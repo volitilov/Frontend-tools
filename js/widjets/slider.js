@@ -71,4 +71,30 @@ $j(function() {
 
 		return false;
 	});
+
+	// slider6 ::::::::::::::::::::::::::::::::::::::::::::::
+	$j("#slider-range2").slider({
+      orientation: "vertical",
+      range: true,
+      values: [17, 67],
+      slide: function(event, ui) {
+        $j("#amount2").val("$" + ui.values[0] + " - $" + ui.values[1]);
+      }
+    });
+    $j("#amount2").val("$" + $j("#slider-range2").slider("values", 0) +
+      " - $" + $j("#slider-range2").slider("values", 1));
+
+    // slider7 ::::::::::::::::::::::::::::::::::::::::::::::
+    $j("#slider-vertical").slider({
+      orientation: "vertical",
+      range: "min",
+      min: 0,
+      max: 100,
+      value: 60,
+      slide: function(event, ui) {
+        $j("#amount3").val(ui.value);
+      }
+    });
+    $j("#amount3").val($j( "#slider-vertical").slider("value"));
+
 });
