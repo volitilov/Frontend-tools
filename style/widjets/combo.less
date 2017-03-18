@@ -52,7 +52,7 @@
 			&:first-child {
 				i {
 					font-size: 18px;
-					color: #f938ab;
+					color: rgb(167, 252, 0);
 				}
 			}
 			&:last-child {
@@ -63,23 +63,36 @@
 			}
 		}
 	}
+	.dropdown-2 {
+		.dropdown;
+		width: 240px;
+		overflow: hidden;
+		span {
+			&:first-child {
+				i {
+					color: rgb(2, 168, 243);
+				}
+			}
+		}
+	}
 	.dropdown-togle {
 		display: none;
+		border-radius: 4px;
+		border: 1px dotted #ddd;
+		width: 190px;
 		a {
 			display: block;
 			padding: 7px 15px;
 			padding-right: 0px;
-			border-radius: 4px;
-			border: 1px dotted #ddd;
-			width: 190px;
-			margin-bottom: 10px;
+			border-bottom: 1px dotted #ddd;
+			width: auto;
 			text-decoration: none;
 			&:hover {
 				background-color: rgba(0, 0, 0, .05);
 			}
 		}
 		.color1 i {
-			color: rgb(167, 252, 0);
+			color: rgb(15, 226, 184);
 		}
 		.color2 i {
 			color: rgb(2, 168, 243);

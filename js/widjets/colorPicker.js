@@ -975,16 +975,37 @@ var jsc = {
 
 	jscolor : function (targetElement, options) {
 
-		// General options
-		//
-		this.value = null; // initial HEX color. To change it later, use methods fromString(), fromHSV() and fromRGB()
-		this.valueElement = targetElement; // element that will be used to display and input the color code
-		this.styleElement = targetElement; // element that will preview the picked color using CSS backgroundColor
-		this.required = true; // whether the associated text <input> can be left empty
-		this.refine = true; // whether to refine the entered color code (e.g. uppercase it and remove whitespace)
-		this.hash = false; // whether to prefix the HEX color code with # symbol
-		this.uppercase = true; // whether to uppercase the color code
-		this.onFineChange = null; // called instantly every time the color changes (value can be either a function or a string with javascript code)
+		// General options :::::::::::::::::::::::::::::::::::::::::
+
+		this.value = null;
+		// Начальный HEX цвет. Чтобы изменить его позже, используйте 
+		// методы fromString (), fromHSV () и fromRGB ()
+
+		this.valueElement = targetElement;
+		// Элемент, который будет использоваться для отображения и 
+		// ввода цветового кода
+
+		this.styleElement = targetElement;
+		// Элемент, который будет просматривать выбранный цвет с 
+		// помощью CSS backgroundColor
+
+		this.required = true;
+		// Можно ли оставить связанный текст <input> пустым
+
+		this.refine = true;
+		// Следует ли уточнить введенный цветовой код (например, в 
+		// верхнем регистре и удалить пробелы)
+
+		this.hash = false;
+		// Следует ли префикс цветового кода HEX символом #
+
+		this.uppercase = true;
+		// Следует ли использовать цветовой код в верхнем регистре
+
+		this.onFineChange = null;
+		// Вызывается мгновенно при каждом изменении цвета (значение 
+		// может быть функцией или строкой с кодом javascript)
+
 		this.activeClass = 'jscolor-active'; // class to be set to the target element when a picker window is open on it
 		this.minS = 0; // min allowed saturation (0 - 100)
 		this.maxS = 100; // max allowed saturation (0 - 100)
@@ -1802,9 +1823,13 @@ jsc.jscolor.lookupClass = 'jscolor';
 jsc.jscolor.installByClassName = function (className) {
 	var inputElms = document.getElementsByTagName('input');
 	var buttonElms = document.getElementsByTagName('button');
+	var linkElms = document.getElementsByTagName('a');
+	var spanElms = document.getElementsByTagName('span');
 
 	jsc.tryInstallOnElements(inputElms, className);
 	jsc.tryInstallOnElements(buttonElms, className);
+	jsc.tryInstallOnElements(linkElms, className);
+	jsc.tryInstallOnElements(spanElms, className);
 };
 
 
