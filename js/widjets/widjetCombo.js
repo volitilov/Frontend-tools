@@ -3,7 +3,40 @@ var $j = jQuery.noConflict();
 $j(function() {
 	var count = false;
 
-	// Dropdown colaps :::::::::::::::::::::::::::::::::
+	// Form version ::::::::::::::::::::::::::::::::::::::::::::::
+	var select = $j('#select option:selected').text();
+
+	$j('#select').change(function() {
+		var select = $j('#select option:selected').text();
+		
+		switch (select) {
+			case 'Ex. color 1':
+				$j('.round1').css({
+					backgroundColor: 'rgb(2, 168, 243)'
+				});
+				break;
+			case 'Ex. color 2':
+				$j('.round1').css({
+					backgroundColor: 'rgb(167, 252, 0)'
+				});
+				break;
+				break;
+			case 'Ex. color 3':
+				$j('.round1').css({
+					backgroundColor: 'rgb(15, 226, 184)'
+				});
+				break;
+			default:
+				$j('.round1').css({
+					backgroundColor: '#ff3366'
+				});
+				break;
+		}
+
+	});
+
+
+	// Dropdown colaps :::::::::::::::::::::::::::::::::::::::::::
 	$j('.dropdown').click(function(event) {
 		event = event || window.event;
 		event.preventDefault();
@@ -20,14 +53,6 @@ $j(function() {
 	});
 
 
-		// $j('.default-color').css({
-		// 	color: 'rgb(15, 226, 184)'
-		// });
-
-		// $j('.color1 i').css({
-		// 	color: 'rgb(167, 252, 0)'
-		// });
-
 	// Select the color of the drop-down menu ::::::::::::::::::::
 	$j('.color1, .color2, .color3').click(function(event) {
 		event = event || window.event;
@@ -36,12 +61,20 @@ $j(function() {
 		var color = $j(this).find('i').css('color');
 
 		$j('.round2').css({
-			transition: '1s',
 			backgroundColor: color
+		});
+
+		$j(this).find('i').css({
+			color: $j('.default-color').css('color')
+		});
+
+		$j('.default-color').css({
+			color: color
 		});
 
 		return false;
 	});
+	
 });
 
 // ColorPicker version ::::::::::::::::::::::::
