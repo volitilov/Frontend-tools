@@ -131,7 +131,8 @@ svg:not(:root) {
   box-sizing: border-box;
 }
 a {
-  color: #0089FD;
+  // color: #0089FD;
+  color: #1A3332;
 }
 a:hover,
 a:focus {

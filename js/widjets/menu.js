@@ -3,15 +3,15 @@ var $j = jQuery.noConflict();
 $j(function() {
 	var count = false;
 
-	$j('.brand-info').click(function(event) {
+	$j('.brand-info, .brand-info1').click(function(event) {
 		event = event || window.event;
 		event.preventDefault();
 
 		if (count == false) {
-			$j('.sub-menu').show();
+			$j(this).next().show();
 			count = true;
 		} else {
-			$j('.sub-menu').hide();
+			$j(this).next().hide();
 			count = false;
 		}
 

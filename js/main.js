@@ -15,7 +15,9 @@ addScript('/js/widjets/sidebar.js');
 addScript('/js/widjets/contextMenu.js');
 addScript('/js/widjets/toolbar.js');
 addScript('/js/widjets/menu.js');
-// addScript('/js/widjets/slider.js');
 addScript('/js/widjets/uploader.js');
 addScript('/js/widjets/colorPicker.js');
 addScript('/js/widjets/widjetCombo.js');
+addScript('/js/widjets/datepicker.js');
+
+addScript('/js/widjets/slider.js');

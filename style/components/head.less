@@ -1,12 +1,19 @@
 .head {
 	border-radius: 4px;
-	border-bottom: 2px dotted #ddd;
-	background-color: #eee;
+	background-color: #F2F4FF;
+	border-bottom: 1px dotted #ddd;
 	nav {
 		display: block;
 		overflow: hidden;
 		width: 100%;
 		padding: 0px 100px;
+		.navbar-left {
+			padding-top: 13px;
+			.sub-menu {
+				z-index: 9999;
+				width: 40%;
+			}
+		}
 		ul {
 			display: inline-block;
 			padding: 0px;
@@ -14,18 +21,12 @@
 				display: inline-block;
 				vertical-align: middle;
 			}
-			&:first-child {
-				float: left;
-				img {
-					width: 70%;
-				}
-			}
 			&:last-child {
 				transition: 0.3s;
 				float: right;
 				a {
 					.btn-background;
-					color: #1A3332;
+					// color: #1A3332;
 				}
 			}
 		}

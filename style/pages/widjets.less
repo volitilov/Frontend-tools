@@ -2,14 +2,33 @@
 	padding-left: 75px;
 	padding-right: 75px;
 	ul {
-		padding-left: 20px;
+		padding-left: 0px;
 		padding-bottom: 30px;
 		li {
-			list-style: circle;
+			list-style: none;
 			a {
 				padding-top: 3px;
 				padding-bottom: 3px;
 				display: block;
+				text-decoration: none;
+				span {
+					vertical-align: middle;
+					display: inline-block;
+					margin-right: 7px;
+					i {
+						font-size: 13px;
+						color: red;
+					}
+				}
+				&:hover {
+					color: red;
+				}
+			}
+			.good i {
+				color: green;
+			}
+			.good:hover {
+				color: green;
 			}
 		}
 	}
