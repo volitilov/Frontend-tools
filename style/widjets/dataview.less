@@ -1,0 +1,130 @@
+.widjet-dataview {
+	padding: 50px 100px;
+	.widjet-left {
+		padding: 0px;
+		.add-content {
+			padding: 30px;
+			padding-bottom: 10px;
+			border-radius: 5px;
+			border: 2px dotted #ddd;
+			h4 {
+				color: #999;
+				font-size: 14px;
+				padding-bottom: 20px;
+			}
+			form {
+				display: block;
+				overflow: hidden;
+				label, input, small, select, textarea {
+					width: 100%;
+					margin-bottom: 5px;
+					margin-top: 5px;
+				}
+				input, select, textarea {
+					background-color: transparent;
+					border-radius: 5px;
+					border: 2px dotted #ddd;
+					padding: 7px 15px;
+					&:focus {
+						outline: none;
+					}
+				}
+				button {
+					-webkit-user-select: none;
+					margin-bottom: 20px;
+					background: rgb(66, 133, 244);
+					border: 0;
+					border-radius: 2px;
+					box-sizing: border-box;
+					color: #fff;
+					cursor: pointer;
+					font-size: .875em;
+					padding: 10px 24px;
+					transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+					&:hover {
+						box-shadow: 0 8px 8px rgba(0,0,0,0.24), 0 0 8px rgba(0,0,0,0.12);
+						// box-shadow: 0 1px 3px rgba(0, 0, 0, .50);
+						cursor: pointer;
+					}
+				}
+				.section {
+					margin-bottom: 20px;
+					overflow: hidden;
+				}
+			}
+		}
+		.remove-content {
+			margin-top: 30px;
+			padding: 30px;
+			border-radius: 5px;
+			border: 2px dotted #ddd;
+			h4 {
+				color: #999;
+				font-size: 14px;
+				display: block;
+				padding-bottom: 40px;
+			}
+			a {
+				-webkit-user-select: none;
+				background: rgb(66, 133, 244);
+				border: 0;
+				border-radius: 2px;
+				box-sizing: border-box;
+				color: #fff;
+				cursor: pointer;
+				font-size: .875em;
+				margin: 0;
+				padding: 10px 24px;
+				transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+				text-decoration: none;
+				&:hover {
+					box-shadow: 0 8px 8px rgba(0,0,0,0.24), 0 0 8px rgba(0,0,0,0.12);
+					// box-shadow: 0 1px 3px rgba(0, 0, 0, .50);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.widjet-right {
+		padding: 0px 30px;
+		.widjet-view {
+			padding: 0px;
+			text-align: right;
+			ul {
+				padding: 0px;
+				li {
+					list-style: none;
+					display: inline-block;
+					a {
+						padding: 10px;
+					}
+				}
+			}
+		}
+		.widjet-data {
+			border-radius: 5px;
+			border: 2px dotted #ddd;
+			padding: 30px;
+			.data-item {
+				border-radius: 5px;
+				border: 1px dotted #ddd;
+				padding: 20px;
+				margin: 5px;
+				width: 48%;
+				display: inline-block;
+				text-decoration: none;
+				&:hover {
+					background-color: rgba(0, 0, 0, .03);
+				}
+				h4 {
+					padding-bottom: 15px;
+					color: #333;
+					font-weight: bold;
+				}
+				.content-description {
+					color: #777;
+				}
+			}
+		}
+	}
+}
