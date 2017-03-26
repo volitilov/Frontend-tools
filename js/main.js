@@ -1,8 +1,8 @@
-function addScript(src){
-	var script = document.createElement('script');
-	script.src = src;
-	script.async = false;
-	document.head.appendChild(script);
+function addScript(src) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
 }
 
 // my_scripts ::::::::::::::::::::::::::::::::::::::
@@ -22,5 +22,6 @@ addScript('/js/widjets/datepicker.js');
 addScript('/js/widjets/form.js');
 addScript('/js/widjets/list.js');
 addScript('/js/widjets/dataview.js');
+addScript('/js/widjets/tree.js');
 
 addScript('/js/widjets/slider.js');
