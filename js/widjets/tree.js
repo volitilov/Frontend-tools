@@ -1,18 +1,22 @@
 var j = jQuery.noConflict();
 
 j(function() {
-    var count = true;
-
-    j('.tree .dropdown').click(function(event) {
+    j('.widjet-tree .dropdown > a').click(function(event) {
         event = event || window.event;
         event.preventDefault();
 
-        if (count == true) {
-            j(this).next('.dropdown-togle').hide();
-            count = false;
+        var togle = j(this).next();
+
+        if (togle.css('display') == 'block') {
+            j(this).find('span:first').css({
+                transform: 'rotate(0deg)'
+            });
+            togle.hide();
         } else {
-            j(this).next('.dropdown-togle').show();
-            count = true;
+            j(this).find('span:first').css({
+                transform: ''
+            });
+            togle.show();
         }
 
         return false;
