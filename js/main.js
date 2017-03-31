@@ -23,5 +23,6 @@ addScript('/js/widjets/form.js');
 addScript('/js/widjets/list.js');
 addScript('/js/widjets/dataview.js');
 addScript('/js/widjets/tree.js');
+addScript('/js/widjets/carousel.js');
 
-addScript('/js/widjets/slider.js');
+// addScript('/js/widjets/slider.js');

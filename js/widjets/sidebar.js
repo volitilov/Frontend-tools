@@ -42,7 +42,7 @@ $j(function() {
 		event = event || window.event;
 		event.preventDefault();
 
-		if(count == true) {
+		if(count) {
 			if(count2) {
 				$j(this).find('.dop-menu').hide();
 				count2 = false
