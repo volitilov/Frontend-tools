@@ -49,11 +49,38 @@ j(function() {
     j('.carousel .left, .right').click(function(event) {
         event = event || window.event;
         event.preventDefault();
+        var itemActive = 0;
+        var maxItem = 0;
+        var items = [];
 
+        // get and remove class .active :::::::::::
+        j('.carousel-inner .item').each(function() {
+            items.push(j(this));
+            maxItem ++;
+
+            if (j(this).hasClass('active')) {
+                itemActive = Number(j(this).attr('data-item'));
+                j(this).removeClass('active');
+            }
+        });
+
+        // this next ::::::::::::::::::::::::::::::
+        if (j(this).hasClass('right')) {
+            if (itemActive == maxItem) {
+                items[0].addClass('active');
+            } else {
+                items[itemActive].addClass('active');
+            }
+        }
+
+        // this prev ::::::::::::::::::::::::::::::
         if (j(this).hasClass('left')) {
-            j('.carousel-inner .item').prev();
-        } else {
-            j('.carousel-inner .item').next();
+            if ((itemActive - 1) < 1) {
+                items[(maxItem - 1)].addClass('active');
+            } else {
+                // alert(itemActive - 1);
+                items[(itemActive - 1)].addClass('active');
+            }
         }
 
         return false;
