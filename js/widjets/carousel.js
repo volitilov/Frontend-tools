@@ -78,7 +78,7 @@ j(function() {
             if ((itemActive - 1) < 1) {
                 items[(maxItem - 1)].addClass('active');
             } else {
-                // alert(itemActive - 1);
+                alert(itemActive - 1);
                 items[(itemActive - 1)].addClass('active');
             }
         }
