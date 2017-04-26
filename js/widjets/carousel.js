@@ -46,14 +46,14 @@ j(function() {
     });
 
     // added handler next/prev button :::::::::::::::::::::::::::
-    j('.carousel .left, .right').click(function(event) {
+    j('.widjet-carousel .left, .right').click(function(event) {
         event = event || window.event;
         event.preventDefault();
         var itemActive = 0;
         var maxItem = 0;
         var items = [];
 
-        // get and remove class .active :::::::::::
+        // get and remove class .active :::::::::::::::::::::::::
         j('.carousel-inner .item').each(function() {
             items.push(j(this));
             maxItem ++;
@@ -64,22 +64,48 @@ j(function() {
             }
         });
 
-        // this next ::::::::::::::::::::::::::::::
+        // get and remove class .active in .carousel-indicator ::
+        j('.carousel-indicator li').each(function() {
+            if (j(this).hasClass('active')) {
+                j(this).removeClass('active');
+            }
+        });
+
+        // this next ::::::::::::::::::::::::::::::::::::::::::::
         if (j(this).hasClass('right')) {
             if (itemActive == maxItem) {
                 items[0].addClass('active');
+                j('.carousel-indicator li').each(function() {
+                    if (j(this).attr('data-slider-to') == 1) {
+                        j(this).addClass('active');
+                    }
+                });
             } else {
                 items[itemActive].addClass('active');
+                j('.carousel-indicator li').each(function() {
+                    if (j(this).attr('data-slider-to') == itemActive + 1) {
+                        j(this).addClass('active');
+                    }
+                });
             }
         }
 
-        // this prev ::::::::::::::::::::::::::::::
+        // this prev ::::::::::::::::::::::::::::::::::::::::::::
         if (j(this).hasClass('left')) {
-            if ((itemActive - 1) < 1) {
+            if (itemActive <= 1) {
                 items[(maxItem - 1)].addClass('active');
+                j('.carousel-indicator li').each(function() {
+                    if (j(this).attr('data-slider-to') == maxItem) {
+                        j(this).addClass('active');
+                    }
+                });
             } else {
-                alert(itemActive - 1);
-                items[(itemActive - 1)].addClass('active');
+                items[(itemActive - 2)].addClass('active');
+                 j('.carousel-indicator li').each(function() {
+                    if (j(this).attr('data-slider-to') == (itemActive - 1)) {
+                        j(this).addClass('active');
+                    }
+                });
             }
         }
 
