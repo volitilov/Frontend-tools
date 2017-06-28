@@ -1,0 +1,53 @@
+.widjet-multiView {
+	padding: 50px;
+	padding-left: 80px;
+	li {
+		display: inline-block;
+		list-style: none;
+	}
+	a {
+		display: inline-block;
+		padding: 8px 30px;
+		background-color: #eee;
+		border-radius: 4px;
+		text-decoration: none;
+		&:hover {
+			background-color: #ddd;
+		}
+	}
+	h3 {
+		padding-bottom: 15px;
+		border-bottom: 1px dotted #ddd;
+		margin-bottom: 15px;
+	}
+	.multiView {
+		display: block;
+		position: relative;
+		height: auto;
+		width: 400px;
+	}
+	.multiView-control {
+		display: block;
+		width: 100%;
+		position: relative;
+		.active a {
+			background-color: #ddd;
+		}
+	}
+	.multiView-content {
+		.tab-content {
+			display: none;
+			padding: 30px;
+			position: relative;
+			border-radius: 4px;
+			border: 2px dotted #ddd;
+			height: 450px;
+		}
+		.block-scroll {
+			overflow-y: scroll;
+		}
+		.active {
+			display: block;
+		}
+	}
+}

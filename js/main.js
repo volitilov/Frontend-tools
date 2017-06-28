@@ -24,5 +24,6 @@ addScript('/js/widjets/list.js');
 addScript('/js/widjets/dataview.js');
 addScript('/js/widjets/tree.js');
 addScript('/js/widjets/carousel.js');
+addScript('/js/widjets/multiView.js');
 
 // addScript('/js/widjets/slider.js');
