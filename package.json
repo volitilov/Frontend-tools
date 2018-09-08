@@ -1,0 +1,25 @@
+{
+  "name": "frontend-tools",
+  "version": "0.0.1",
+  "description": "Набор виджетов написанных на JQuery",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volitilov/Frontend-tools.git"
+  },
+  "author": "volitilov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volitilov/Frontend-tools/issues"
+  },
+  "homepage": "https://github.com/volitilov/Frontend-tools#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-less": "^4.0.1",
+    "less-plugin-autoprefix": "^2.0.0"
+  }
+}
